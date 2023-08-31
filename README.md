@@ -1,4 +1,4 @@
-# CryptoDashboard
+# CryptoDashboard.
 
 CryptoDashboard is a web application that provides real-time information and analysis of various cryptocurrencies. It allows users to track the latest prices, market capitalization, trading volumes, and historical trends of popular cryptocurrencies.
 
