@@ -2,7 +2,7 @@
   "name": "menifest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://khansharukh27.github.io/CryptoCurrencyDashboard",
+  "homepage": "https://khansharukh27.github.io/cryptoDashboard",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
