@@ -9,7 +9,7 @@ export default function Dashboard() {
   return (
     <div className="min-w-[87vw] px-1 xl:min-w-[65vw]">
       <div className="flex my-5 xl:my-0 justify-between">
-        <div className="">
+        <div className="basis-[10%]">
           <Currency />
         </div>
         <div className="basis-[90%] md:mx-5">

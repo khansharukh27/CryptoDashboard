@@ -54,60 +54,60 @@ export default function CoinList() {
 
   return (
     <div className="min-w-[87vw] xl:min-w-[22.5vw] overflow-auto border-2 border-solid border-slate-50 rounded-lg shadow-md bg-white">
-      <div className="p-3 px-5 text-lg font-bold text-center italic border-b-2 border-solid border-slate-50">
-        <span>Cryptocurrency by Market Cap</span>
-      </div>
-      <div className="p-5 max-h-[75vh] overflow-auto">
-        {coins &&
-          coins.map((coin) => {
-            return (
-              <div className="my-8 flex flex-col" key={coin.id}>
-                <div className="flex justify-between">
-                  <div className="flex">
-                    <img src={coin.image} alt={coin.name} className="h-8" />
-                    <span className="text-lg font-bold mx-2">{coin.name}</span>
-                  </div>
-                  <div>
-                    <span
-                      className={`text-md font-medium ${
-                        coin.price_change_percentage_24h > 0
-                          ? "text-green-600"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {coin.price_change_24h > 0 ? (
-                        <div className="inline-block">
-                          <IoCaretUp />
-                        </div>
-                      ) : (
-                        <div className="inline-block">
-                          <IoCaretDown />
-                        </div>
-                      )}
-                    </span>
-                    {currencyLogo[currency]}
-                    {coin.current_price}
-                  </div>
+    <div className="p-3 px-5 text-lg font-bold text-center italic border-b-2 border-solid border-slate-50">
+      <span>Cryptocurrency by Market Cap</span>
+    </div>
+    <div className="p-5 max-h-[75vh] overflow-auto">
+      {coins &&
+        coins.map((coin) => {
+          return (
+            <div className="my-8 flex flex-col" key={coin.id}>
+              <div className="flex justify-between">
+                <div className="flex">
+                  <img src={coin.image} alt={coin.name} className="h-8" />
+                  <span className="text-lg font-bold mx-2">{coin.name}</span>
                 </div>
-                <div className="flex justify-between sm:border-b-2 sm:border-solid sm:border-slate-300 xl:border-0">
-                  <span className="text-sm text-slate-500">
-                    Market Cap: {coin.market_cap}
-                  </span>
+                <div>
                   <span
-                    className={`text-[0.8rem] ${
+                    className={`text-md font-medium ${
                       coin.price_change_percentage_24h > 0
                         ? "text-green-600"
                         : "text-red-500"
                     }`}
                   >
-                    {coin.price_change_percentage_24h > 0 ? "+" : null}
-                    {coin.price_change_percentage_24h}%
+                    {coin.price_change_24h > 0 ? (
+                      <div className="inline-block">
+                        <IoCaretUp />
+                      </div>
+                    ) : (
+                      <div className="inline-block">
+                        <IoCaretDown />
+                      </div>
+                    )}
                   </span>
+                  {currencyLogo[currency]}
+                  {coin.current_price}
                 </div>
               </div>
-            );
-          })}
-      </div>
+              <div className="flex justify-between sm:border-b-2 sm:border-solid sm:border-slate-300 xl:border-0">
+                <span className="text-sm text-slate-500">
+                  Market Cap: {coin.market_cap}
+                </span>
+                <span
+                  className={`text-[0.8rem] ${
+                    coin.price_change_percentage_24h > 0
+                      ? "text-green-600"
+                      : "text-red-500"
+                  }`}
+                >
+                  {coin.price_change_percentage_24h > 0 ? "+" : null}
+                  {coin.price_change_percentage_24h}%
+                </span>
+              </div>
+            </div>
+          );
+        })}
     </div>
-  );
+  </div>
+);
 }
